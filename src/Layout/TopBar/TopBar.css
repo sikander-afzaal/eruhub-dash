@@ -1,0 +1,122 @@
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.left-top-bar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 15px;
+}
+.left-top-bar h3 {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--text-purple);
+  line-height: 1;
+}
+.left-top-bar h2 {
+  color: white;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 1;
+}
+.right-top-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.notif-div {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+.notif-dot {
+  position: absolute;
+  background-color: var(--cyan);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  top: 2px;
+  right: 1px;
+  border: 2px solid #170131;
+}
+.user-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.user-div img {
+  width: 64px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.user-desc {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 15px;
+}
+.user-desc h3 {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--text-purple);
+  line-height: 1;
+}
+.user-desc h2 {
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1;
+}
+.user-desc h2 svg {
+  color: var(--text-purple);
+  font-size: 16px;
+  cursor: pointer;
+}
+.sidebar-toggle {
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+@media screen and (max-width: 1017px) {
+  .sidebar-toggle {
+    display: block;
+  }
+}
+@media screen and (max-width: 731px) {
+  .user-desc {
+    display: none;
+  }
+  .left-top-bar {
+    gap: 10px;
+  }
+  .left-top-bar h3 {
+    font-size: 14px;
+  }
+  .left-top-bar h2 {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .notif-div,
+  .right-top-bar > img {
+    display: none;
+  }
+}

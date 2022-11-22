@@ -1,0 +1,53 @@
+.overview-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  height: 232px;
+  border-radius: 10px;
+  min-width: 174px;
+  max-width: 174px;
+  background-color: var(--section-bg);
+}
+.overview-desc {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-inline: 15px;
+  padding-top: 20px;
+  width: 100%;
+  gap: 15px;
+}
+.overview-desc h2 {
+  font-size: 28px;
+  font-weight: 500;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1;
+}
+.overview-desc span,
+.overview-card p {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-purple);
+  line-height: 1;
+}
+.overview-desc span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.overview-desc span svg {
+  font-size: 15px;
+}
+.overview-card > img {
+  width: 100%;
+  object-fit: cover;
+}

@@ -1,5 +1,7 @@
 import OverviewCard from "../../Components/OverviewCards/OverviewCard";
 import "./Dashboard.css";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Dashboard = () => {
   const tableData = [
@@ -103,6 +105,28 @@ const Dashboard = () => {
               return <TableRow {...elem} key={"table-row" + idx} />;
             })}
           </div>
+        </div>
+      </div>
+      <div className="graphs-dashboard">
+        <div className="graph-div">
+          <div className="top-table">
+            <h2>User Activity</h2>
+            <div style={{ width: "140px" }} className="filter-div">
+              <p>Last Month</p>
+              <FontAwesomeIcon icon={faCaretDown} />
+            </div>
+          </div>
+          <img src="/assets/chart2.png" alt="" />
+        </div>
+        <div className="graph-div">
+          <div className="top-table">
+            <h2>Retention</h2>
+            <div className="filter-div">
+              <img src="/assets/ico-filter.png" alt="" />
+              <p>Filter</p>
+            </div>
+          </div>
+          <img src="/assets/chart2.png" alt="" />
         </div>
       </div>
     </div>

@@ -147,10 +147,33 @@
   font-size: 16px;
   margin-top: 5px;
 }
+.graphs-dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+.graph-div {
+  width: 100%;
+  background-color: var(--section-bg);
+  border-radius: 10px;
+  padding-top: 30px;
+  overflow: hidden;
+}
+.graph-div > img {
+  margin-bottom: -6px;
+  max-width: 100%;
+  width: 100%;
+  object-fit: contain;
+}
 @media screen and (max-width: 1017px) {
   .bottom-table-wrap,
   .top-dashboard {
     max-width: calc(100vw - 40px);
+  }
+  .graphs-dashboard {
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 500px) {

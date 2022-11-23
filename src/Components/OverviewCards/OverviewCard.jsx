@@ -1,5 +1,4 @@
 import "./OverviewCard.css";
-import React, { PureComponent } from "react";
 import { AreaChart, Area, Tooltip, ResponsiveContainer } from "recharts";
 import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

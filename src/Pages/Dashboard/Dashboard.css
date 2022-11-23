@@ -175,6 +175,9 @@
   height: 100%;
   object-fit: fill;
 }
+.graph-div > div:last-child * {
+  border: none !important;
+}
 @media screen and (max-width: 1017px) {
   .bottom-table-wrap,
   .top-dashboard {

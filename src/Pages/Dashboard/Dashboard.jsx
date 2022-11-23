@@ -2,6 +2,7 @@ import OverviewCard from "../../Components/OverviewCards/OverviewCard";
 import "./Dashboard.css";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ReactCohortGraph from "react-cohort-graph";
 import {
   BarChart,
   Bar,
@@ -11,7 +12,6 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
-  Label,
 } from "recharts";
 const Dashboard = () => {
   const tableData = [
@@ -91,6 +91,28 @@ const Dashboard = () => {
     },
   ];
 
+  const CohortData = {
+    days: {
+      "10 Dec": [200, 180, 120, 80, 50, 20, 15],
+      "11 Dec": [200, 180, 120, 80, 50, 20],
+      "12 Dec": [300, 180, 120, 80, 50],
+      "13 Dec": [200, 180, 120, 80, 50],
+      "14 Dec": [300, 180, 120, 80],
+      "15 Dec": [200, 180, 120],
+      "16 Dec": [300, 200],
+    },
+    weeks: {
+      week1: [200, 10, 20],
+      week2: [300, 200],
+      week3: [200],
+    },
+    months: {
+      month1: [200, 10, 20, 30],
+      month2: [300, 200, 150],
+      month3: [200, 110],
+      month4: [100],
+    },
+  };
   return (
     <div className="dashboard">
       <div className="top-dashboard">
@@ -244,7 +266,40 @@ const Dashboard = () => {
               <p>Filter</p>
             </div>
           </div>
-          <img src="/assets/chart2.png" alt="" />
+          <ReactCohortGraph
+            wrapperStyles={{
+              width: "100%",
+              padding: "20px",
+              "border-radius": "10px",
+              background: "transparent",
+            }}
+            shadeColor="#4BACF2"
+            showEmptyDataMessage={true}
+            data={CohortData}
+            showHeaderValues={true}
+            toggleValues={true}
+            bodyCellColor="white"
+            customEmptyDataMessage={null}
+            headerCellStyles={{
+              background: "transparent",
+              color: "var(--text-purple)",
+              "font-size": "16px",
+              "font-weight": "400",
+              border: "none",
+            }}
+            tableHeadingStyles={{
+              border: "none",
+            }}
+            fixedTablePartStyles={{
+              border: "none",
+            }}
+            tableCellStyles={{
+              border: "none",
+            }}
+            tableRowStyles={{
+              border: "none",
+            }}
+          />
         </div>
       </div>
     </div>

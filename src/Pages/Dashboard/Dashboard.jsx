@@ -2,7 +2,17 @@ import OverviewCard from "../../Components/OverviewCards/OverviewCard";
 import "./Dashboard.css";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+  Label,
+} from "recharts";
 const Dashboard = () => {
   const tableData = [
     {
@@ -36,6 +46,51 @@ const Dashboard = () => {
       max: "5",
     },
   ];
+  const data = [
+    {
+      name: "April",
+      uv: 4000,
+      pv: 2400,
+      amt: 2400,
+    },
+    {
+      name: "April",
+      uv: 3000,
+      pv: 1398,
+      amt: 2210,
+    },
+    {
+      name: "April",
+      uv: 2000,
+      pv: 9800,
+      amt: 2290,
+    },
+    {
+      name: "April",
+      uv: 2780,
+      pv: 3908,
+      amt: 2000,
+    },
+    {
+      name: "April",
+      uv: 1890,
+      pv: 4800,
+      amt: 2181,
+    },
+    {
+      name: "April",
+      uv: 2390,
+      pv: 3800,
+      amt: 2500,
+    },
+    {
+      name: "April",
+      uv: 3490,
+      pv: 4300,
+      amt: 2100,
+    },
+  ];
+
   return (
     <div className="dashboard">
       <div className="top-dashboard">
@@ -130,7 +185,56 @@ const Dashboard = () => {
               <FontAwesomeIcon icon={faCaretDown} />
             </div>
           </div>
-          <img src="/assets/chart2.png" alt="" />
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart
+              data={data}
+              margin={{
+                top: 0,
+                right: 18,
+                left: 18,
+                bottom: 0,
+              }}
+            >
+              <CartesianGrid
+                vertical={false}
+                stroke="#ad9cc4"
+                strokeOpacity={0.5}
+              />
+              <XAxis dataKey="name" />
+              <YAxis
+                label={{
+                  value: "Users",
+                  angle: 90,
+                  position: "insideLeft",
+                  fill: "#ad9cc4",
+                  offset: -5,
+                  opacity: 0.6,
+                }}
+                axisLine={false}
+                yAxisId="left"
+                orientation="left"
+                stroke="#8884d8"
+              />
+              <YAxis
+                label={{
+                  value: "Conversations",
+                  angle: 90,
+                  position: "insideLeft",
+                  fill: "#ad9cc4",
+                  offset: 64,
+                  opacity: 0.6,
+                }}
+                axisLine={false}
+                yAxisId="right"
+                orientation="right"
+                stroke="#82ca9d"
+              />
+              <Tooltip />
+              <Legend />
+              <Bar yAxisId="left" dataKey="pv" fill="#8884d8" />
+              <Bar yAxisId="right" dataKey="uv" fill="#82ca9d" />
+            </BarChart>
+          </ResponsiveContainer>
         </div>
         <div className="graph-div">
           <div className="top-table">

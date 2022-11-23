@@ -16,6 +16,8 @@
   width: 100%;
   overflow-x: scroll;
   gap: 20px;
+  overflow-y: hidden;
+  padding-bottom: 10px;
 }
 /* ===== Scrollbar CSS ===== */
 /* Firefox */

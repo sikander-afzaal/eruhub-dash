@@ -44,42 +44,56 @@ const Dashboard = () => {
           name="Total Messages"
           topText="14,938"
           percent="5%"
+          graphColor={"#002619"}
+          borderColor={"#1BC98E"}
         />
         <OverviewCard
           status={""}
           name="Total Conversations"
           topText="2,358"
           percent="1.3%"
+          graphColor="#370006"
+          borderColor="#E64759"
         />
         <OverviewCard
           status={""}
           name="Avg. Conv. Steps/User"
           topText="2.4"
           percent="6.75%"
+          graphColor="#0D0041"
+          borderColor="#9F86FF"
         />
         <OverviewCard
           status={""}
           name="Avg. Conv. Steps/User"
           topText="6,358"
           percent="1.25%"
+          graphColor="#241D00"
+          borderColor="#FFCC00"
         />
         <OverviewCard
           status={"positive"}
           name="Total Sent"
           topText="7,158"
           percent="25.50%"
+          graphColor="#2C2C2C"
+          borderColor="#FFCC00"
         />
         <OverviewCard
           status={"positive"}
           name="Total Received"
           topText="7,780"
           percent="13.65%"
+          graphColor="#00234A"
+          borderColor="#007AFF"
         />
         <OverviewCard
           status={"positive"}
           name="Avg. Session Length"
           topText="4 Min"
           percent="1.30%"
+          graphColor="#4A0E00"
+          borderColor="#FF5E3A"
         />
       </div>
       <div className="conversation-table">

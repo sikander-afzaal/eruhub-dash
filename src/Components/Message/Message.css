@@ -1,0 +1,53 @@
+.message {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.message img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.message > div {
+  max-width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 15px;
+}
+.message p {
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  background-color: #34244d;
+  border: 1px solid #413157;
+  border-radius: 0px 16px 16px 16px;
+  padding: 15px;
+}
+.message h6 {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-purple);
+}
+.loggedUserMsg img {
+  order: 2;
+}
+.loggedUserMsg p {
+  border-radius: 16px 0px 16px 16px;
+  background-color: #7400fc;
+  border: 1px solid #413157;
+}
+.loggedUserMsg > div {
+  align-items: flex-end;
+}
+.loggedUserMsg {
+  align-self: flex-end;
+}
+@media screen and (max-width: 565px) {
+  .message p {
+    font-size: 14px;
+  }
+}

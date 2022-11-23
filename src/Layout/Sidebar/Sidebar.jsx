@@ -30,7 +30,7 @@ const Sidebar = ({ setSidebar, sidebar }) => {
           <NavLink
             className={({ isActive }) => (isActive ? "active-link" : "")}
             onClick={() => setSidebar(false)}
-            to={"/messages"}
+            to={"/conversation"}
           >
             <img src="/assets/ico-chat.png" alt="" />
             <p>Conversations</p>

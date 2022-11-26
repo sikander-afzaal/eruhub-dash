@@ -22,6 +22,7 @@ const MainDash = () => {
           name: "Message",
           desc: "Chat With Users",
         });
+        break;
       case "/main-dash/activity":
         setTopBarText({
           name: "Activity",

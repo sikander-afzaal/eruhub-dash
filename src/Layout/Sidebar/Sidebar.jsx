@@ -45,6 +45,7 @@ const Sidebar = ({ setSidebar, sidebar }) => {
             <p>Activity</p>
           </NavLink>
           <NavLink
+            style={{ pointerEvents: "none" }}
             className={({ isActive }) => (isActive ? "active-link" : "")}
             onClick={() => setSidebar(false)}
             to={"/main-dash/retention"}

@@ -4,6 +4,7 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
+  padding-inline: 20px;
   min-height: 100vh;
 }
 .login-div {

@@ -11,16 +11,21 @@ const MainDash = () => {
   const [sidebar, setSidebar] = useState(false);
   useEffect(() => {
     switch (pathname) {
-      case "/":
+      case "/main-dash":
         setTopBarText({
           name: "Dashboard",
           desc: "Overview",
         });
         break;
-      case "/conversation":
+      case "/main-dash/conversation":
         setTopBarText({
           name: "Message",
           desc: "Chat With Users",
+        });
+      case "/main-dash/activity":
+        setTopBarText({
+          name: "Activity",
+          desc: "Overview",
         });
         break;
       default:

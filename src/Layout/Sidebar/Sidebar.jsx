@@ -21,8 +21,9 @@ const Sidebar = ({ setSidebar, sidebar }) => {
         <nav>
           <NavLink
             onClick={() => setSidebar(false)}
+            end
             className={({ isActive }) => (isActive ? "active-link" : "")}
-            to={"/"}
+            to={"/main-dash"}
           >
             <img src="/assets/ico-dash.png" alt="" />
             <p>Dashboard</p>
@@ -30,7 +31,7 @@ const Sidebar = ({ setSidebar, sidebar }) => {
           <NavLink
             className={({ isActive }) => (isActive ? "active-link" : "")}
             onClick={() => setSidebar(false)}
-            to={"/conversation"}
+            to={"/main-dash/conversation"}
           >
             <img src="/assets/ico-chat.png" alt="" />
             <p>Conversations</p>
@@ -38,7 +39,7 @@ const Sidebar = ({ setSidebar, sidebar }) => {
           <NavLink
             className={({ isActive }) => (isActive ? "active-link" : "")}
             onClick={() => setSidebar(false)}
-            to={"/activity"}
+            to={"/main-dash/activity"}
           >
             <img src="/assets/ico-chart.png" alt="" />
             <p>Activity</p>
@@ -46,7 +47,7 @@ const Sidebar = ({ setSidebar, sidebar }) => {
           <NavLink
             className={({ isActive }) => (isActive ? "active-link" : "")}
             onClick={() => setSidebar(false)}
-            to={"/retention"}
+            to={"/main-dash/retention"}
           >
             <img src="/assets/ico-heart.png" alt="" />
             <p>Retention</p>

@@ -1,51 +1,21 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import Sidebar from "./Layout/Sidebar/Sidebar";
-import TopBar from "./Layout/TopBar/TopBar";
-import Dashboard from "./Pages/Dashboard/Dashboard";
-import Conversation from "./Pages/Conversation/Conversation";
+import Dashboard from "./Pages/MainDash/Dashboard/Dashboard";
+import Conversation from "./Pages/MainDash/Conversation/Conversation";
+import Login from "./Pages/Login/Login";
+import MainDash from "./Pages/MainDash/MainDash";
 
 function App() {
-  const { pathname } = useLocation();
-  const [topBarText, setTopBarText] = useState({
-    name: "Dashboard",
-    desc: "Overview",
-  });
-  const [sidebar, setSidebar] = useState(false);
-  useEffect(() => {
-    switch (pathname) {
-      case "/":
-        setTopBarText({
-          name: "Dashboard",
-          desc: "Overview",
-        });
-        break;
-      case "/conversation":
-        setTopBarText({
-          name: "Message",
-          desc: "Chat With Users",
-        });
-        break;
-      default:
-        break;
-    }
-  }, [pathname]);
-
   return (
     <div className="App">
-      <Sidebar setSidebar={setSidebar} sidebar={sidebar} />
-      <div className="main-dash">
-        <TopBar
-          name={topBarText.name}
-          setSidebar={setSidebar}
-          desc={topBarText.desc}
-        />
-        <Routes>
-          <Route element={<Dashboard />} path="/" />
-          <Route element={<Conversation />} path="/conversation" />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/main-dash" element={<MainDash />}>
+          <Route path="" element={<Dashboard />} />
+          <Route path="conversation" element={<Conversation />} />
+        </Route>
+      </Routes>
     </div>
   );
 }

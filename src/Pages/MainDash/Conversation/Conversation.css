@@ -212,7 +212,6 @@
   font-weight: 500;
 }
 .send-message input:focus {
-  border: none;
   outline: none;
 }
 .right-send-message {

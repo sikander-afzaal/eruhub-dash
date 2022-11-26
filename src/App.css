@@ -1,4 +1,4 @@
-.App {
+.dash-page {
   width: 100%;
   min-height: 100vh;
   display: grid;
@@ -16,7 +16,7 @@
   padding-bottom: 35px;
 }
 @media screen and (max-width: 1017px) {
-  .App {
+  .dash-page {
     grid-template-columns: 1fr;
   }
   .main-dash {

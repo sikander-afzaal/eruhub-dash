@@ -1,4 +1,4 @@
-import OverviewCard from "../../Components/OverviewCards/OverviewCard";
+import OverviewCard from "../../../Components/OverviewCards/OverviewCard";
 import "./Dashboard.css";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

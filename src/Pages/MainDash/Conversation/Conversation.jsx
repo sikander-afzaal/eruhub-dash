@@ -1,4 +1,4 @@
-import Message from "../../Components/Message/Message";
+import Message from "../../../Components/Message/Message";
 import "./Conversation.css";
 
 const Conversation = () => {
